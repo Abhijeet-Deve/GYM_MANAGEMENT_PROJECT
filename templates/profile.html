@@ -1,0 +1,116 @@
+{% block body %}
+
+
+<h1 style="text-align: center">
+    Profile</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" style="margin-left: 300px;">
+            <h1>Enrollment Details</h1>
+            {% for post in posts %}
+            <table class="table table-bordered" border="2" style="background-color:gray; font-size: large;">
+                <tbody>
+                    <tr>
+                        <th class="bg-warning text-dark">
+                            <h5>Name : {{post.FullName}}</h5>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="bg-warning text-dark">
+                            <h5>Email : {{post.Email}}</h5>
+                        </th>
+                        <!-- Add similar structure for other details -->
+                    </tr>
+                    <tr>
+                        <th class="bg-warning text-dark">
+                            <h5>SelectMembershipplan : {{post.SelectMembershipplan}}</h5>
+                        </th>
+                        <!-- Add similar structure for other details -->
+                    </tr>
+                    <tr>
+                        <th class="bg-warning text-dark">
+                            <h5>SelectTrainer : {{post.SelectTrainer}}</h5>
+                        </th>
+                        <!-- Add similar structure for other details -->
+                    </tr>
+                    <tr>
+                        <th class="bg-warning text-dark">
+                            <h5>Reference : {{post.Reference}}</h5>
+                        </th>
+                        <!-- Add similar structure for other details -->
+                    </tr>
+                    <tr>
+                        <th class="bg-warning text-dark">
+                            <h5>paymentStatus : {{post.paymentStatus}}</h5>
+                        </th>
+                        <!-- Add similar structure for other details -->
+                    </tr>
+                    <tr>
+                        <th class="bg-warning text-dark">
+                            <h5>Price : {{post.Price}}</h5>
+                        </th>
+                        <!-- Add similar structure for other details -->
+                    </tr>
+
+                    <tr>
+                        <th class="bg-warning text-dark">
+                            <h5>DueDate : {{post.DueDate}}</h5>
+                        </th>
+                        <!-- Add similar structure for other details -->
+                    </tr>
+
+
+                    <tr>
+                        <th class="bg-warning text-dark">
+                            <h5>PhoneNumber : {{post.PhoneNumber}}</h5>
+                        </th>
+                        <!-- Add similar structure for other details -->
+                    </tr>
+
+
+                    <tr>
+                        <th class="bg-warning text-dark">
+                            <h5>timeStamp : {{post.timeStamp}}</h5>
+                        </th>
+                        <!-- Add similar structure for other details -->
+                    </tr>
+                </tbody>
+            </table>
+            {% endfor %}
+        </div>
+
+        <div class="col-md-4">
+            <div style="margin-top: -500px; margin-right: 300px;">
+                <center>
+                    <h2 class="display-4 mt-3" style="margin-left: 830px;"><b>Attendance Data</b></h2>
+                </center>
+                <table class="table" align="right" border="2" style="background-color: dimgray; font-size: large;">
+                    <thead class="thead-warning">
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Login</th>
+                            <th scope="col">Logout</th>
+                            <th scope="col">Workout</th>
+                            <th scope="col">Trained By</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for attend in attendance %}
+                        <tr>
+                            <td>{{attend.Selectdate}}</td>
+                            <td>{{attend.Login}}</td>
+                            <td>{{attend.Logout}}</td>
+                            <td>{{attend.SelectWorkout}}</td>
+                            <td>{{attend.TrainedBy}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    {% endblock body %}
