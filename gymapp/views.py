@@ -16,6 +16,9 @@ from django.contrib.auth.decorators import login_required
 def Home(request):
     return render(request,"index.html")
 
+def services(request):
+    return render(request,"index.html")
+
 
 
 

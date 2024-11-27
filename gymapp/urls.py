@@ -36,7 +36,8 @@ urlpatterns = [
     path('Back_workout',views.Back_workout,name="Back_workout"),
     path('shoulder_workout',views.shoulder_workout,name="shoulder_workout"),
     path('Chest_workout',views.Chest_workout,name="Chest_workout"),
-    path('Leg_workout',views.Leg_workout,name="Leg_workout")
+    path('Leg_workout',views.Leg_workout,name="Leg_workout"),
+    path("services",views.services,name="sevices")
 
 
 ]
